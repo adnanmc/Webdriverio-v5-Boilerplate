@@ -67,7 +67,7 @@ exports.config = {
     // Define all options that are relevant for the WebdriverIO instance here
     //
     // Level of logging verbosity: trace | debug | info | warn | error | silent
-    logLevel: 'info',
+    logLevel: 'silent',
     //
     // Set specific log levels per logger
     // loggers:
@@ -164,6 +164,10 @@ exports.config = {
      */
     // before: function (capabilities, specs) {
     // },
+    before: function() {
+        var chai = require('chai');
+        var assert = chai.assert;
+    },
     /**
      * Runs before a WebdriverIO command gets executed.
      * @param {String} commandName hook command name
