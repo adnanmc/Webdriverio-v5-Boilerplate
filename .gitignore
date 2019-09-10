@@ -10,3 +10,4 @@ logs/.DS_Store
 .DS_Store
 .env
 allure-results/
+allure-report/
